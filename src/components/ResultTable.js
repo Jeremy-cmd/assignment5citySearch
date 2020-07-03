@@ -20,7 +20,7 @@ class ResultTable extends Component{
             try {
                 let x = JSON.parse(this.props.data);
                 table.push(<th>ZipCodes</th>);
-                for(let i=0; i<this.props.data.length; i++){
+                for(let i=0; i<x.length; i++){
                     table.push(
 
                         <tr>
