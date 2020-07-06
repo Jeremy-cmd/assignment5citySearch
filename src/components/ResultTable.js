@@ -10,16 +10,21 @@ class ResultTable extends Component{
     }
 
     render() {
+
         let table = [];
+        //if data is empty return no results
         if(this.props.empty === "true") {
             table.push(<tr>No Results</tr>);
             return table;
         }
         else {
-            console.log("the data " + this.props.data);
+
             try {
+                //change data to JSON
                 let x = JSON.parse(this.props.data);
                 table.push(<th>ZipCodes</th>);
+
+                //store html with zipcodes
                 for(let i=0; i<x.length; i++){
                     table.push(
 
